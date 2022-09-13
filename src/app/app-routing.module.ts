@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './admin/auth/auth.component';
 import { FormularioColoresComponent } from './admin/colores/formulario-colores/formulario-colores.component';
 import { ListaColoresComponent } from './admin/colores/lista-colores/lista-colores.component';
 import { FormularioProductoComponent } from './admin/productos/formulario-producto/formulario-producto.component';
@@ -9,6 +10,7 @@ import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.compo
 
 const routes: Routes = [
   { path: '', redirectTo: 'ad-productos', pathMatch: 'full' },
+  { path: 'autenticacion', component: AuthComponent },
   { path: 'tipos', component: ListaTiposComponent },
   { path: 'nuevo-tipo', component: FormularioTiposComponent },
   { path: 'editar-tipo/:id', component: FormularioTiposComponent },

@@ -17,6 +17,7 @@ import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.compo
 import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formulario-tipos.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthComponent } from './admin/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormularioColoresComponent,
     ListaColoresComponent,
     ListaTiposComponent,
-    FormularioTiposComponent
+    FormularioTiposComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
