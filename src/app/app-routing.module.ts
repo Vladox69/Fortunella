@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormularioColoresComponent } from './admin/colores/formulario-colores/formulario-colores.component';
+import { ListaColoresComponent } from './admin/colores/lista-colores/lista-colores.component';
 import { FormularioProductoComponent } from './admin/productos/formulario-producto/formulario-producto.component';
 import { ListaProductosComponent } from './admin/productos/lista-productos/lista-productos.component';
 import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formulario-tipos.component';
@@ -10,6 +12,9 @@ const routes: Routes = [
   { path: 'tipos', component: ListaTiposComponent },
   { path: 'nuevo-tipo', component: FormularioTiposComponent },
   { path: 'editar-tipo/:id', component: FormularioTiposComponent },
+  { path: 'colores', component: ListaColoresComponent },
+  { path: 'nuevo-color', component: FormularioColoresComponent },
+  { path: 'editar-color/:id', component: FormularioColoresComponent },
   { path: 'productos', component: ListaProductosComponent },
   { path: 'nuevo-producto', component: FormularioProductoComponent },
   { path: 'editar-producto/:id', component: FormularioProductoComponent },
