@@ -1,0 +1,19 @@
+<div class="container">
+    <button mat-button>Atras</button>
+    <div class="col-auto p-5 text-center form-tipos">
+        <h2>Formulario Tipo</h2>
+        <form action="" [formGroup]="formTipo">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="nombre">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripcion</mat-label>
+                <textarea matInput placeholder="" formControlName="descripcion"></textarea>
+            </mat-form-field>
+            <div >
+                <button mat-raised-button (click)="onClickGuardar()" color="primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>

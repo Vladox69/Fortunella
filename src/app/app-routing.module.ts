@@ -2,9 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularioProductoComponent } from './admin/productos/formulario-producto/formulario-producto.component';
 import { ListaProductosComponent } from './admin/productos/lista-productos/lista-productos.component';
+import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formulario-tipos.component';
+import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'ad-productos', pathMatch: 'full' },
+  { path: 'tipos', component: ListaTiposComponent },
+  { path: 'nuevo-tipo', component: FormularioTiposComponent },
+  { path: 'editar-tipo/:id', component: FormularioTiposComponent },
   { path: 'productos', component: ListaProductosComponent },
   { path: 'nuevo-producto', component: FormularioProductoComponent },
   { path: 'editar-producto/:id', component: FormularioProductoComponent },
