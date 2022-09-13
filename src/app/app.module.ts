@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../environments/environment';
 import { ListaProductosComponent } from './admin/productos/lista-productos/lista-productos.component';
 import { FormularioProductoComponent } from './admin/productos/formulario-producto/formulario-producto.component';
@@ -16,8 +17,6 @@ import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.compo
 import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formulario-tipos.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -39,6 +38,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule,
+    AngularFireStorageModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],

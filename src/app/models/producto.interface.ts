@@ -5,5 +5,5 @@ export default interface Producto{
     urlImage:string;
     visible:boolean;
     tipo:string;
-    colores:string[];
+    colores_array:string[];
 }

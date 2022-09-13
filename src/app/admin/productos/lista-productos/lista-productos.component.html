@@ -1,3 +1,58 @@
-<div class="container">
-    
+<div class="container mb-3">
+    <button class="mb-3" mat-raised-button color="primary" (click)="onClickNuevo()">Nuevo</button>
+    <table mat-table [dataSource]="productos" class="mat-elevation-z2">
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id. </th>
+            <td mat-cell *matCellDef="let producto"> {{producto.id}} </td>
+        </ng-container>
+
+        <!-- Nombre Column -->
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let producto"> {{producto.nombre}} </td>
+        </ng-container>
+
+        <!-- Precio Column -->
+        <ng-container matColumnDef="precio">
+            <th mat-header-cell *matHeaderCellDef> Precio </th>
+            <td mat-cell *matCellDef="let producto"> {{producto.precio}} </td>
+        </ng-container>
+
+        <!-- Visible Column -->
+        <ng-container matColumnDef="visible">
+            <th mat-header-cell *matHeaderCellDef> Visible </th>
+            <td mat-cell *matCellDef="let producto">
+                <mat-checkbox disabled [checked]="producto.visible"></mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- Imagen Column -->
+        <ng-container matColumnDef="imagen">
+            <th mat-header-cell *matHeaderCellDef> Imagen </th>
+            <td mat-cell *matCellDef="let producto;let j=index"> <img class="imagen" src={{imagesUrl[j]}} alt=""> </td>
+        </ng-container>
+
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="tipo">
+            <th mat-header-cell *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let producto;let i=index"> {{tipos[i].nombre}} </td>
+        </ng-container>
+
+        <!-- Acciones Column -->
+        <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let producto">
+                <button mat-icon-button color="primary" (click)="onClickEditar(producto.id)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="onClickEliminar(producto.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 </div>
