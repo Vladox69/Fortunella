@@ -22,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HomeComponent } from './admin/home/home.component';
 import { LandingPageComponent } from './landing-module/landing-page/landing-page.component';
+import { CatalogoComponent } from './catalogo-module/catalogo/catalogo.component';
+import { CardComponent } from './catalogo-module/card/card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { LandingPageComponent } from './landing-module/landing-page/landing-page
     FormularioTiposComponent,
     AuthComponent,
     HomeComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CatalogoComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
