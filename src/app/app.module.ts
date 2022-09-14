@@ -21,6 +21,7 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HomeComponent } from './admin/home/home.component';
+import { LandingPageComponent } from './landing-module/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HomeComponent } from './admin/home/home.component';
     ListaTiposComponent,
     FormularioTiposComponent,
     AuthComponent,
-    HomeComponent
+    HomeComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

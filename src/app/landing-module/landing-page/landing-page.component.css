@@ -1,0 +1,24 @@
+.container-hero{
+    width: 500px;
+}
+
+.contenido-hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-hero img{
+    height: 628;
+    transform: rotate(10deg);
+}
+
+.container-vista{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.vista img{
+    width: 350px;
+    height: 400px;
+}

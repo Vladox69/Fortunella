@@ -8,9 +8,10 @@ import { FormularioProductoComponent } from './admin/productos/formulario-produc
 import { ListaProductosComponent } from './admin/productos/lista-productos/lista-productos.component';
 import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formulario-tipos.component';
 import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.component';
+import { LandingPageComponent } from './landing-module/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'ad-productos', pathMatch: 'full' },
+  { path: '',component:LandingPageComponent},
   { path: 'auth', component: AuthComponent },
   { path: 'home', component: HomeComponent },
   { path: 'tipos', component: ListaTiposComponent },
