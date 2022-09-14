@@ -43,6 +43,9 @@ export class FormularioTiposComponent implements OnInit {
     }else{
       await this.tipoService.updateTipo(this.id,this.formTipo.value);
     }
+  }
+
+  volver(){
     this.router.navigate(['/tipos']);
   }
 

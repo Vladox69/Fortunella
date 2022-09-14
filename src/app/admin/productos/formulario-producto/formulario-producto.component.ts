@@ -150,9 +150,11 @@ export class FormularioProductoComponent implements OnInit {
         this.formProducto.value
       );
     }
-    this.router.navigate(['/productos']);
+    this.volver();
   }
 
-
+  volver(){
+    this.router.navigate(['/productos']);
+  }
 
 }

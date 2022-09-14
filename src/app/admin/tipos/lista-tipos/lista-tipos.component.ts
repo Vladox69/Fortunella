@@ -34,6 +34,10 @@ export class ListaTiposComponent implements OnInit {
     this.router.navigate(['/nuevo-tipo']);
   }
 
+  onClickAtras(){
+    this.router.navigate(['/home']);
+  }
+
   onClickEditar(id:string){
     this.router.navigate(['/editar-tipo',id])
   }

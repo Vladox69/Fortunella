@@ -34,6 +34,10 @@ export class ListaColoresComponent implements OnInit {
     this.router.navigate(['/nuevo-color']);
   }
 
+  onClickAtras(){
+    this.router.navigate(['/home']);
+  }
+
   onClickEditar(id:string){
     this.router.navigate(['/editar-color',id]);
   }

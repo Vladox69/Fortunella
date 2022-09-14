@@ -86,6 +86,10 @@ export class ListaProductosComponent implements OnInit {
     this.router.navigate(['/nuevo-producto']);
   }
 
+  onClickAtras(){
+    this.router.navigate(['/home']);
+  }
+
   onClickEditar(id: string) {
     this.router.navigate(['/editar-producto', id]);
   }

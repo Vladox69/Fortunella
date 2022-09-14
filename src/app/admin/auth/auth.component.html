@@ -1,3 +1,18 @@
 <div class="container">
-    <h1>Debe iniciar sesión</h1>
+    <div class="col-auto p-5 text-center form-tipos">
+        <h2>Login</h2>
+        <form action="" [formGroup]="formAuth">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+            </mat-form-field>
+            <div>
+                <button mat-raised-button [disabled]="!formAuth.valid" (click)="onClickLogin()" color="primary">Login</button>
+            </div>
+        </form>
+    </div>
 </div>
