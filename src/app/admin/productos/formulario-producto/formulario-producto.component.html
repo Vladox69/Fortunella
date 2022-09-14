@@ -57,8 +57,9 @@
             <!--Imagen-->
             <div class="mb-2">
                 <input type="file" (change)="imageUpload($event)" />
-                <img class="image" src={{imagenStr}} alt="">
-                <input type="text" hidden formControlName="urlImage" [value]="filePath"><br>
+                <img class="image"  [src]="imagen" alt="">
+                <input type="text" hidden formControlName="urlImage"><br>
+                <input type="text" hidden formControlName="filePath"><br>
             </div>
             <div>
                 <button mat-raised-button (click)="onClickGuardar()" color="primary">Guardar</button>

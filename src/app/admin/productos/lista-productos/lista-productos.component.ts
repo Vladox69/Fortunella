@@ -15,7 +15,6 @@ export class ListaProductosComponent implements OnInit {
   productos!: Producto[];
   tipos!: Tipo[];
   tiposName!: Tipo[];
-  imagesUrl!: string[];
   displayedColumns: string[] = [
     'id',
     'nombre',
@@ -66,19 +65,9 @@ export class ListaProductosComponent implements OnInit {
 
   setValuesFront(productos: Producto[]) {
     this.tiposName = [];
-    this.imagesUrl = [];
     for (let index in productos) {
       let search = this.tipos.find((tipo) => tipo.id == productos[index].tipo);
       this.tiposName.push(search!);
-    }
-    for (let index in productos) {
-      let rf = this.storage.ref(productos[index].urlImage);
-      let url = rf.getDownloadURL();
-      let imagenUrl;
-      url.subscribe((res) => {
-        imagenUrl = res;
-        this.imagesUrl.push(imagenUrl);
-      });
     }
   }
 

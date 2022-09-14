@@ -6,4 +6,5 @@ export default interface Producto{
     visible:boolean;
     tipo:string;
     colores_array:string[];
+    filePath:string;
 }
