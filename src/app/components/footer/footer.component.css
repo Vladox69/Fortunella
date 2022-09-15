@@ -7,3 +7,20 @@
 .titulo{
     font-size: 15px;
 }
+
+.social-iconos{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido-footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.contenido-social{
+    display: flex;
+    gap: 75px;
+}
