@@ -24,6 +24,9 @@ import { HomeComponent } from './admin/home/home.component';
 import { LandingPageComponent } from './landing-module/landing-page/landing-page.component';
 import { CatalogoComponent } from './catalogo-module/catalogo/catalogo.component';
 import { CardComponent } from './catalogo-module/card/card.component';
+import { ContactoComponent } from './contacto-module/contacto/contacto.component';
+import { SobreFortunellaComponent } from './sobre-fortunella-module/sobre-fortunella/sobre-fortunella.component';
+import { PersonalizarComponent } from './personalizar-module/personalizar/personalizar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { CardComponent } from './catalogo-module/card/card.component';
     HomeComponent,
     LandingPageComponent,
     CatalogoComponent,
-    CardComponent
+    CardComponent,
+    ContactoComponent,
+    SobreFortunellaComponent,
+    PersonalizarComponent
   ],
   imports: [
     BrowserModule,

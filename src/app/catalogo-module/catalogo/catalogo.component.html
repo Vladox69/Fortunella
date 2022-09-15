@@ -1,3 +1,6 @@
-<div class="container contenido-card" *ngFor="let producto of productos">
-    <app-card [producto]="producto"></app-card>
+
+<div class="container contenido-card">
+    <div *ngFor="let producto of productos">
+        <app-card [producto]="producto"></app-card>
+    </div>
 </div>

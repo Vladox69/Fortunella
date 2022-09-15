@@ -1,0 +1,10 @@
+img{
+    width: 650px;
+    height: 650px;
+    margin: 50px;
+}
+
+.contenido-contacto{
+    display: flex;
+    align-items: center;
+}

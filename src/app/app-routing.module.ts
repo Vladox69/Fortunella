@@ -10,21 +10,30 @@ import { FormularioTiposComponent } from './admin/tipos/formulario-tipos/formula
 import { ListaTiposComponent } from './admin/tipos/lista-tipos/lista-tipos.component';
 import { CatalogoComponent } from './catalogo-module/catalogo/catalogo.component';
 import { LandingPageComponent } from './landing-module/landing-page/landing-page.component';
+import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/compat/auth-guard';
+import { ContactoComponent } from './contacto-module/contacto/contacto.component';
+import { SobreFortunellaComponent } from './sobre-fortunella-module/sobre-fortunella/sobre-fortunella.component';
+import { PersonalizarComponent } from './personalizar-module/personalizar/personalizar.component';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 
 const routes: Routes = [
   { path: '',component:LandingPageComponent},
   { path: 'auth', component: AuthComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'tipos', component: ListaTiposComponent },
-  { path: 'nuevo-tipo', component: FormularioTiposComponent },
-  { path: 'editar-tipo/:id', component: FormularioTiposComponent },
-  { path: 'colores', component: ListaColoresComponent },
-  { path: 'nuevo-color', component: FormularioColoresComponent },
-  { path: 'editar-color/:id', component: FormularioColoresComponent },
-  { path: 'productos', component: ListaProductosComponent },
-  { path: 'nuevo-producto', component: FormularioProductoComponent },
-  { path: 'editar-producto/:id', component: FormularioProductoComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin}},
+  { path: 'tipos', component: ListaTiposComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'nuevo-tipo', component: FormularioTiposComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'editar-tipo/:id', component: FormularioTiposComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'colores', component: ListaColoresComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'nuevo-color', component: FormularioColoresComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'editar-color/:id', component: FormularioColoresComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'productos', component: ListaProductosComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'nuevo-producto', component: FormularioProductoComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
+  { path: 'editar-producto/:id', component: FormularioProductoComponent, canActivate: [AngularFireAuthGuard],data:{authGuardPipe:redirectUnauthorizedToLogin} },
   { path: 'catalogo', component: CatalogoComponent },
+  {path:'contacto',component:ContactoComponent},
+  {path:'sobre-fortunella',component:SobreFortunellaComponent},
+  {path:'personalizar',component:PersonalizarComponent}
 ];
 
 @NgModule({
